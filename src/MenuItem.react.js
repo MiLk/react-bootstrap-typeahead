@@ -28,15 +28,14 @@ const MenuItem = React.createClass({
     const {active, children, className, disabled} = this.props;
 
     return (
-      <li
+      <button
         className={cx({
           'active': active,
           'disabled': disabled,
-        }, className)}>
-        <a href="#" onClick={this._handleClick}>
-          {children}
-        </a>
-      </li>
+        }, className, 'dropdown-item')}
+        onClick={this._handleClick}>
+        {children}
+      </button>
     );
   },
 
